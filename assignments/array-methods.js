@@ -94,8 +94,27 @@ console.log(`The Total donation is ${ticketPriceTotal}`);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Find out runners whose emails end with ".edu"
+let emailsWithEdu = [];
+emailsWithEdu = runners.filter((runnerEmail) => {
+  return runnerEmail.email.indexOf('.edu') > -1;
+});
+console.log(emailsWithEdu);
 
 
 // Problem 2
+// Find the average of the donation that was made
+let ticketPriceAverage = 0;
+ticketPriceAverage = runners.reduce((total, runner) => {
+return total += runner.donation/runners.length;
+}, 0);
+console.log(`The Average donation is ${ticketPriceAverage}`);
+
 
 // Problem 3
+//Find the number of runners who came from SKinix company
+let skinixCompany = [];
+skinixCompany = runners.filter((runner) => {
+  return runner.company_name === 'Skinix';
+});
+console.log(skinixCompany);
