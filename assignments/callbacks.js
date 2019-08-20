@@ -71,12 +71,15 @@ function multiplyNums(x, y, cb) {
 
 multiplyNums(2,3, multiply => console.log(`The multiplication of the two numbers is ${multiply}`))
 
+// const lists = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-
+  return cb(list.includes(item))
 }
+
+// contains('Notebook', lists, specificItem => console.log(`${specificItem}`))
 
 /* STRETCH PROBLEM */
 
